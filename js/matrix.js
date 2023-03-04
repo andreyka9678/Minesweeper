@@ -1,5 +1,5 @@
-import { generateRandom } from "./getRandom";
-
+import { generateRandom } from "./getRandom.js";
+import { createBox } from "./box.js";
 export let matrix = [];
 
 function addBombs(bombCount) {
@@ -19,6 +19,38 @@ function addBombs(bombCount) {
 
     }
 }
+export function getAllNeighbors (coordinates) {
+    const {x, y} = coordinates
+    const n_1 = matrix[y-1]?.[x]
+    const n_2 = matrix[y-1]?.[x+1]
+    const n_3 = matrix[y]?.[x+1]
+    const n_4 = matrix[y+1]?.[x+1]
+    const n_5 = matrix[y+1]?.[x]
+    const n_6 = matrix[y+1]?.[x-1]
+    const n_7 = matrix[y]?.[x-1]
+    const n_8 = matrix[y-1]?.[x-1]
+
+    return [
+        n_1,
+        n_2,
+        n_3,
+        n_4,
+        n_5,
+        n_6,
+        n_7,
+        n_8,
+    ].filter(item => typeof item !== 'undefined')
+}
+
+export function openAllBoxes() {
+    matrix.forEach((matrixLine) => {
+      matrixLine.forEach((box) => {
+        if (box.isBomb) {
+          box.open();
+        }
+      });
+    });
+  }
 
 export function createMatrix (width = 16, height = 16, bombCount = 40) {
     matrix = Array.from({length: height}, () => 
@@ -26,5 +58,11 @@ export function createMatrix (width = 16, height = 16, bombCount = 40) {
     );
     addBombs(bombCount);
 
-    console.log(matrix);
+    matrix.forEach((matrixLine, y) => {
+        matrixLine.forEach((matrixElem, x) => {
+            const newBox = createBox(Boolean(matrixElem), { x, y });
+            matrix[y][x] = newBox
+       });
+    });
+
 }

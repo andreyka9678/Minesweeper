@@ -5,10 +5,10 @@
     "description": "Проект «Сапер»",
     "repository": {
         "type": "git",
-        "url": "{{sshUrl}}"
+        "url": "git@github.com:andreyka9678/Minesweeper.git"
     },
     "devDependencies": {
-        "browser-sync": "2.27.7"
+        "browser-sync": "2.28.1"
     },
     "license": "MIT",
     "scripts": {
