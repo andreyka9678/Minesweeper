@@ -1,0 +1,21 @@
+{
+    "name": "minesweeper",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Проект «Сапер»",
+    "repository": {
+        "type": "git",
+        "url": "{{sshUrl}}"
+    },
+    "devDependencies": {
+        "browser-sync": "2.27.7"
+    },
+    "license": "MIT",
+    "scripts": {
+        "start": "browser-sync start --server --no-ui --files \"js/**/*.js\""
+    },
+    "engines": {
+        "node": "16.x",
+        "npm": "8.x"
+    }
+}
