@@ -1,0 +1,101 @@
+
+@font-face {
+    font-family: "Press Start";
+    src: url("../fonts/PressStartRegular.ttf");
+}
+@font-face {
+    font-family: "Digital Dismay";
+    src: url("../fonts/digital-dismay.otf") format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Press Start", sans-serif;
+    
+}
+
+#status-bar {
+    width: calc(20px * 16);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #c0c0c0;
+}
+#bomb-counter {
+    justify-self: center;
+    }
+
+#timer, #bomb-counter {
+        font-family: 'Digital Dismay';
+        font-size: 35px;
+        letter-spacing: 1px;
+        color: red;
+        background-color: black;
+        text-align: center;
+        padding: 4px 4px 0 7px;
+        line-height: 1em;
+    }
+
+#app {
+    width: calc(20px * 16);
+    /* height: calc(20px * 16); */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+        width: 20px;
+        height: 20px;
+        background-color: lightgray;
+        border: 1px solid darkgray;
+        display: flex;
+        align-items: center;
+        justify-content: center;}
+
+        .initial {
+            border: 2px solid grey;
+            border-style: outset;
+            cursor: pointer;
+        }
+
+        .bomb-count-1 {
+            color: blue;
+            font-size: 80%;
+        }
+
+        .bomb-count-2 {
+            color: green;
+            font-size: 80%;
+        }
+
+        .bomb-count-3 {
+            color: red;
+            font-size: 80%;
+        }
+
+        .bomb-count-4 {
+            color: darkblue;
+            font-size: 80%;
+        }
+
+        .bomb-count-5 {
+            color: brown;
+            font-size: 80%;
+        }
+
+        .bomb-count-6 {
+            color: turquoise;
+            font-size: 80%;
+        }
+
+        .bomb-count-7 {
+            color: black;
+            font-size: 80%;
+        }
+
+        .bomb-count-8 {
+            color: white;
+            font-size: 80%;
+        }
+    
+

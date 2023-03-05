@@ -1,2 +1,3 @@
-Тестовое задание игра Minesweeper
+#Тестовое задание игра Minesweeper
+
 Запуск: npm i, npm start

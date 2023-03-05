@@ -85,6 +85,7 @@ class Box {
       this.boxElem.addEventListener("contextmenu", (e) => {
         e.preventDefault();
         this.setFlag(true);
+        
       });
       appElem.appendChild(boxElem);
     }

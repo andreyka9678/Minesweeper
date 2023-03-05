@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "Press Start";
+  src: url("/PressStartRegular.b95d5f83.ttf");
+}
+* {
+  box-sizing: border-box;
+  font-family: "Press Start", sans-serif;
+  height: auto;
+}
+
+#status-bar {
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: #c0c0c0;
+}
+
+#app {
+  width: 320px;
+  height: 320px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#app .box {
+  width: 20px;
+  height: 20px;
+  background-color: lightgray;
+  border: 1px solid darkgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#app .box.initial {
+  border: 2px solid grey;
+  border-style: outset;
+  cursor: pointer;
+}
+#app .box.bomb-count-1 {
+  color: blue;
+  font-size: 80%;
+}
+#app .box.bomb-count-2 {
+  color: green;
+  font-size: 80%;
+}
+#app .box.bomb-count-3 {
+  color: red;
+  font-size: 80%;
+}
+#app .box.bomb-count-4 {
+  color: darkblue;
+  font-size: 80%;
+}
+#app .box.bomb-count-5 {
+  color: brown;
+  font-size: 80%;
+}
+#app .box.bomb-count-6 {
+  color: turquoise;
+  font-size: 80%;
+}
+#app .box.bomb-count-7 {
+  color: black;
+  font-size: 80%;
+}
+#app .box.bomb-count-8 {
+  color: white;
+  font-size: 80%;
+}
+
+/*# sourceMappingURL=/style.6b54f5b7.css.map */
